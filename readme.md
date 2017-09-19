@@ -3,19 +3,19 @@
 - [Install VirtualBox](boxhttps://www.virtualbox.org/)  
 - [Install Vagrant](https://www.vagrantup.com/)  
 
-1. The following commands are from the [Laravel Homestead instructions](https://laravel.com/docs/5.4/homestead#installation-and-setup)
-2. `vagrant box add laravel/homestead`
-3. `cd ~`
-4. `git clone https://github.com/laravel/homestead.git Homestead`
-5. `cd Homestead`
-6. `git checkout v6.1.0`
-7. (**current pwd:** ~/Homestead) `bash init.sh`
-8. `vim Homestead.yaml`  
+**The following commands are from the [Laravel Homestead instructions](https://laravel.com/docs/5.4/homestead#installation-and-setup)**
+- `vagrant box add laravel/homestead`
+- `cd ~`
+- `git clone https://github.com/laravel/homestead.git Homestead`
+- `cd Homestead`
+- `git checkout v6.1.0`
+- (**current pwd:** ~/Homestead) `bash init.sh`
+- `vim Homestead.yaml`  
    ![Sal's homestead.yaml](http://nicetouch.co/wp-content/uploads/2017/08/homestead-config.png)  
-9. `mkdir ~/Code/Laravel/public`
-10. `echo "192.168.10.10  homestead.app" >> /etc/hosts`
-11. Reprovision if necessary: `vagrant reload --provision` 
-12. If you get a 403 forbidden error when attempting to visit http://homestead.app: `sudo chown -R _www ~/Code/Laravel ; sudo chmod -R g+w ~/Code/Laravel`  
+- `mkdir ~/Code/Laravel/public`
+- `echo "192.168.10.10  homestead.app" >> /etc/hosts`
+- Reprovision if necessary: `vagrant reload --provision` 
+- If you get a 403 forbidden error when attempting to visit http://homestead.app: `sudo chown -R _www ~/Code/Laravel ; sudo chmod -R g+w ~/Code/Laravel`  
 
 -- 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
