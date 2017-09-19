@@ -19,6 +19,7 @@
     "vue": "^2.1.10"
   },
   "dependencies": {
+    "autoprefixer": "^7.1.4",
     "vue-cleave": "^1.2.2",
     "vue-masked-input": "^0.5.2"
   }

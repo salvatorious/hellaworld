@@ -16,9 +16,8 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-
-Vue.component('example', require('./components/Example.vue'));
 Vue.component('login-box', require('./components/LoginBox.vue'));
+Vue.component('dinger', require('./components/Dinger.vue'));
 Vue.component('cleave', Cleave);
 
 const app = new Vue({
@@ -29,6 +28,14 @@ const app = new Vue({
     computed: {
         reversedMessage() {
             return this.message.split('').reverse();
+        }
+    },
+    methods: {
+        login() {
+            this.loggedIn = true;
+        },
+        logout() {
+            this.loggedIn = false;
         }
     }
 });
