@@ -7,5 +7,11 @@
 
 // Bootstrap
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "custom";
+@import "~bootstrap/scss/bootstrap";
 
-@import "../tachyons/tachyons.min.css";
+// @import "../tachyons/tachyons.min.css";
+
+body.fixed-header {
+  padding-top: 6em;
+}

@@ -1,7 +1,7 @@
 <template>
-    <div class="measure lh-copy mt3">
-        <button v-on:click="ding" type="button" class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib">
-            Ding!
+    <div class="mx-auto">
+        <button v-on:click="ding" type="button" class="btn btn-primary">
+            <slot>this is where default text goes</slot>
         </button>
     </div>
 </template>

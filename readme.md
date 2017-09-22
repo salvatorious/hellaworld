@@ -13,6 +13,8 @@
 - `vim Homestead.yaml`  
    ![Sal's homestead.yaml](http://nicetouch.co/wp-content/uploads/2017/09/Screenshot-2017-09-19-16.59.03.png)  
 - `mkdir ~/Code/Laravel/public`  
+- copy .env.example to a file called .env
+- `php artisan key:generate`
 - `echo "192.168.10.10  homestead.app" >> /etc/hosts`  
 - Global homestead command in .bash_profile (`homestead up`, `homestead ssh`):  
 ```function homestead() {  

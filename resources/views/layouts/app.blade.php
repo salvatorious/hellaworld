@@ -13,10 +13,12 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="Zw-100 sans-serif black-80 bg-white">
+<body class="fixed-header">
     <div id="app">
-        @yield('header')
-        @yield('content')
+        <div class="container">
+            @yield('header')
+            @yield('content')
+        </div>
     </div>
 
     <!-- Scripts -->
