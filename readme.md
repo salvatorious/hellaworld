@@ -17,8 +17,11 @@
 - `php artisan key:generate`
 - `echo "192.168.10.10  homestead.app" >> /etc/hosts`  
 - Global homestead command in .bash_profile (`homestead up`, `homestead ssh`):  
-```function homestead() {  
+```
+function homestead() {  
     ( cd ~/Homestead && vagrant $* )  
-}```  
+}
+```  
+- then, you can just `homestead up` to start the VM, and `homestead ssh` once it's ready.
 - Reprovision if necessary: `vagrant reload --provision` 
 - If you get a 403 forbidden error when attempting to visit http://homestead.app: `sudo chown -R _www ~/Code/Laravel ; sudo chmod -R g+w ~/Code/Laravel`  
