@@ -25,3 +25,40 @@ function homestead() {
 - then, you can just `homestead up` to start the VM, and `homestead ssh` once it's ready.
 - Reprovision if necessary: `vagrant reload --provision` 
 - If you get a 403 forbidden error when attempting to visit http://homestead.app: `sudo chown -R _www ~/Code/Laravel ; sudo chmod -R g+w ~/Code/Laravel`  
+
+**Database Manager Options**
+
+- [Install Sequel Pro](https://www.sequelpro.com/)
+- [Install pypMyAdmin](https://www.phpmyadmin.net/)
+
+**Sequel Pro Configuration**
+
+- Name: Homestead
+- Host: 127.0.0.1
+- Username: homestead
+- Password: secret
+- Database: (Optional)
+- Port: 33060
+
+**phpMyAdmin Configuration**
+
+- From ~/Code
+`curl -sS https://raw.githubusercontent.com/grrnikos/pma/master/pma.sh | sh`
+
+- Open up `homestead.yaml` file and add these lines
+
+`folders:
+    - map: /Users/{yourName}/Code/phpMyAdmin
+      to: /home/vagrant/Code/phpMyAdmin
+sites:
+    - map: phpmyadmin.app
+      to: /home/vagrant/Code/phpMyAdmin`
+
+- Open the `/etc/hosts` on your main machine and add:
+`127.0.0.1  phpmyadmin.app`
+
+- Reprovision
+`vagrant reload --provision` 
+
+- Navigate to
+`http://phpmyadmin.app:8000`
